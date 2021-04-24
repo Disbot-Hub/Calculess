@@ -27,10 +27,12 @@ def keep_alive():
   server = Thread(target=run)
   server.start()
 default_prefixes = ["get ", "Get", "go ", "Go ", "hit "]
+
 bot = commands.Bot(command_prefix = default_prefixes , description = 'Money.Co', case_insensitive = False)
-TOKEN = 'NzM1OTEyNTU0ODczNzQ5NTY1.XxnJ-Q.rsD0QabbpK6_bCA3TknpQq4lGhE'
-#on ready event
+
 @cooldown(1, 5, BucketType.default )
+
+#on ready event
 @bot.event
 async def on_ready():
     await bot.change_presence (status = discord.Status.online,
@@ -49,8 +51,8 @@ async def on_command_error(ctx, error):
         print(ctx, error)
 
     else:
-        #await sid.send(f" There was an error, check console for details")
-        #raise error
+        await sid.send(f" There was an error, check console for details")
+        raise error
         return ""
 #loading cogs in main
     # noinspection PyUnboundLocalVariable
