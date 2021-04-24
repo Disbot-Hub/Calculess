@@ -25,7 +25,7 @@ def keep_alive():
   server.start()
 default_prefixes = ["get ", "Get", "go ", "Go ", "hit "]
 bot = commands.Bot(command_prefix = default_prefixes , description = 'Money.Co', case_insensitive = False)
-TOKEN = 'NzM1OTEyNTU0ODczNzQ5NTY1.XxnJ-Q.rsD0QabbpK6_bCA3TknpQq4lGhE'
+TOKEN = <token-here>
 #on ready event
 @cooldown(1, 5, BucketType.default )
 @bot.event
